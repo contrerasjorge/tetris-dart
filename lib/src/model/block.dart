@@ -25,16 +25,16 @@ class Block {
   rotateRight() {
     tiles.forEach((tile) {
       int x = tile.x;
-      tile.x = rotateTile.x - tile.y + rotateTile.y;
-      tile.y = rotateTile.y - x + rotateTile.x;
-    })
+      tile.x = rotationTile.x - tile.y + rotationTile.y;
+      tile.y = rotationTile.y + x - rotationTile.x;
+    });
   }
-  
-  rotateRight() {
+
+  rotateLeft() {
     tiles.forEach((tile) {
       int x = tile.x;
-      tile.x = rotateTile.x + tile.y - rotateTile.y;
-      tile.y = rotateTile.y - x + rotateTile.x;
-    })
+      tile.x = rotationTile.x + tile.y- rotationTile.y;
+      tile.y = rotationTile.y - x + rotationTile.x;
+    });
   }
-}
+} 
